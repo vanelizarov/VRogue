@@ -1,6 +1,0 @@
-# Useless directories and files
-Debug/
-stdafx.*
-targetver.h
-*.vcxproj
-*.filters
