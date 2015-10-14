@@ -1,6 +1,6 @@
 #pragma once
-#include <vector>
-#include <string>
+
+#include "stdafx.h"
 #include "Player.h"
 #include "Enemy.h"
 
@@ -14,16 +14,20 @@ public:
 	void print();
 
 	void movePlayer(char input, Player &player);
-
+	void updateEnemies(Player &player);
 
 	~Level();
 
 private:
+
+	string _fileName;
+
 	vector <string> _levelData;
 	vector <Enemy> _enemies;
 
 	void processPlayerMove(Player &player, int targetX, int targetY);
-	void battleMonster(Player &player, int targetX, int targetY);
+	void processEnemyMove(Player &player, int enemyIndex, int targetX, int targetY);
+	void battleEnemy(Player &player, int targetX, int targetY);
 
 	//getters
 	char getTile(int x, int y);

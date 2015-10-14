@@ -1,5 +1,6 @@
 #pragma once
 
+#include "stdafx.h"
 #include <random>
 #include <ctime>
 
@@ -20,6 +21,7 @@ public:
 
 	//getters
 	void getPosition(int &x, int &y);
+	int getHealth(int &health) { return _health; }
 
 	~Player();
 

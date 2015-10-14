@@ -1,7 +1,12 @@
 #include "stdafx.h"
 #include "GameSystem.h"
-#include <iostream>
+
 #include <conio.h>
+#include "Utilities.h"
+#include "Strings.h"
+
+
+using namespace std;
 
 //constructor, that sets up the game
 GameSystem::GameSystem(string levelFileName) {
@@ -9,7 +14,15 @@ GameSystem::GameSystem(string levelFileName) {
 	_player.init(1, 100, 10, 10, 0);
 	_level.load(levelFileName, _player);
 
-	system("pause");
+	char start;
+	cls();
+	center("VROGUE\n", 11);
+	center("", 12);
+	center("Press any key to start", 13);
+	start = _getch();
+	if (start != '\0') {
+		cls();
+	}
 
 }
 
@@ -21,7 +34,8 @@ void GameSystem::playGame() {
 
 		_level.print();
 		playerMove();
-
+		_level.updateEnemies(_player);
+		
 	}
 
 }

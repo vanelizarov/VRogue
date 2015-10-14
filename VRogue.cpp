@@ -13,7 +13,7 @@ using namespace std;
 
 int main() {
 
-	GameSystem gameSystem("level1.map");
+	GameSystem gameSystem("level0.map");
 
 	gameSystem.playGame();
 
