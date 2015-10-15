@@ -1,7 +1,14 @@
-# VRogue
-Simple rogue-like WIN32 game. 
+# VRogue #
 
 ![Screenshot](screenshot.png)
+
+Simple rogue-like game. 
+
+# Usage #
+
+The source code is cross-platform, so, it can be used both on Windows and *nix systems. But for better performance (i.e. sounds) use it with Windows and Visual Studio. 
+
+ If you are using VS, go to `Project` -> `Properties` -> `Configuration properties` -> `Linker` -> `Input` -> `Additional dependencies` and add `winmm.lib;` to it. This should make the sounds work.
 
 # How to play #
 ### Who is who ###
