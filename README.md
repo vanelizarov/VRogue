@@ -2,6 +2,8 @@
 
 Simple rogue-like WIN32 game. 
 
+![Alt text](screenshot.png)
+
 # How to play
 
 Move player with standard w/s/a/d buttons (you must switch to english language).
