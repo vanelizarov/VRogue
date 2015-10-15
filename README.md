@@ -1,8 +1,9 @@
 # VRogue #
 
-![Screenshot](screenshot.png)
+Simple rogue-like game.
 
-Simple rogue-like game. 
+![Screenshot](screenshot.png)
+ 
 
 # Usage #
 
