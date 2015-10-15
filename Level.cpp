@@ -143,8 +143,8 @@ void Level::movePlayer(char input, Player &player) {
 		processPlayerMove(player, playerX + 1, playerY);
 		break;
 	default:
-		printf("Invalid input.\n");
-		system("pause");
+		//printf("Invalid input.\n");
+		//system("pause");
 		break;
 	}
 
@@ -224,7 +224,7 @@ void Level::processPlayerMove(Player &player, int targetX, int targetY) {
 		_levelData.clear();
 		_enemies.clear();
 		stringstream ss;
-		ss << "level" << moveTile << ".map";
+		ss << "Maps\\level" << moveTile << ".map";
 		
 
 		load(ss.str(), player);
@@ -301,7 +301,10 @@ void Level::battleEnemy(Player & player, int targetX, int targetY) {
 
 				setTile(targetX, targetY, ' ');
 				print();
-				PlaySound(TEXT("beep.wav"), NULL, SND_FILENAME);
+
+				#ifdef WIN32
+					PlaySound(TEXT("Sounds\\beep.wav"), NULL, SND_FILENAME);
+				#endif
 				//printf("\n%s died\n", _enemies[i].getName().c_str());
 
 				//remove enemy
@@ -310,7 +313,7 @@ void Level::battleEnemy(Player & player, int targetX, int targetY) {
 				i--;
 
 				player.addExperience(attackResult);
-				system("pause");
+				//system("pause");
 
 				return;
 			}
@@ -322,12 +325,12 @@ void Level::battleEnemy(Player & player, int targetX, int targetY) {
 			if (attackResult != 0) {
 				setTile(playerX, playerY, 'x');
 				print();
-				printf("You died\n");
-				system("pause");
+				//printf("You died\n");
+				//system("pause");
 				player.addExperience(attackResult);
 				exit(0);
 			}
-			system("pause");
+			//system("pause");
 			return;
 		}
 	}
