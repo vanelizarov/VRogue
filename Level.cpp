@@ -3,7 +3,10 @@
 #include "GameSystem.h"
 #include <fstream>
 #include <sstream>
-#include <mmsystem.h>
+
+#ifdef WIN32
+	#include <mmsystem.h>
+#endif
 
 Level::Level() {
 }
