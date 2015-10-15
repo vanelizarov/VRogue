@@ -1,16 +1,24 @@
 # VRogue
-
 Simple rogue-like WIN32 game. 
 
-![Alt text](screenshot.png)
+![Screenshot](screenshot.png)
 
-# How to play
+# How to play #
+### Who is who ###
+| Sign | Character |
+| ----- | ------ |
+| **@** | player |
+| **g** | goblin |
+| **O** | ogre |
+| **D** | dragon |
+| **0-9** | door |
 
-Move player with standard w/s/a/d buttons (you must switch to english language).
-Avoid or fight goblins and ogres. On the last level there will be a boss - dragon.
+### Rules ###
 
-Numbers from 0 to 9 are doors to next level.
+* Move player with standard **w, s, a, d** buttons (you must switch to US/english language).
+* Avoid or fight goblins and ogres. On the last level there will be a boss - dragon.
+
 
 # Warning
 
-Not all the levels are written completely, work in progress.
+This is currently a **_very-alpha_** version of this project, so, some features are in progress now, some bugs may appear and not all the maps are drawn.
